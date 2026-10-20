@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://xuwas3mtxh2j"]
+
+[ext_resource type="Texture2D" uid="uid://bvg12norek08l" path="res://Sprites/player/Schoolgirl_2/Idle.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://c2lipwre38k3h" path="res://player.gd" id="1_onrkg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_27scu"]
+radius = 17.0
+height = 34.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1309236256]
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1302337923]
+position = Vector2(2, -65)
+texture = ExtResource("1_4flbx")
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1119405888]
+position = Vector2(-1, -2)
+shape = SubResource("CapsuleShape2D_27scu")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1267221482]
+position_smoothing_enabled = true
